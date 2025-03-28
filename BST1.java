@@ -86,4 +86,15 @@ public class BST1 {
             return current;
         }
     }
+    public void print(){
+        preOrder(root);
+    }
+    private void preOrder(Node current){
+        if(current==null){
+            return;
+        }
+        System.out.println(current.student.toString());
+        preOrder(current.left);
+        preOrder(current.right);
+    }
 }
